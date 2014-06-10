@@ -35,7 +35,7 @@ notifications:
   irc: irc.freenode.org#mongoengine
 branches:
   only:
-  - master
+  - /^master.*$/
   - /^v.*$/
 deploy:
   provider: pypi
