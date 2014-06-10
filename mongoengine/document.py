@@ -275,6 +275,9 @@ class Document(BaseDocument):
                         for vlock in vlocks:
                             vlock_db = self._db_field_map[vlock]
                             inc_dict[vlock_db] = 1
+                            # Detect a conflict by only selecting documents
+                            # where the vlock field is set to the correct
+                            # value in the database
                             if vlock_db in doc:
                                 select_dict[vlock_db] = getattr(self, vlock)
                             else:
