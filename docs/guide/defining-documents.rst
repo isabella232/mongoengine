@@ -178,7 +178,6 @@ arguments can be set on all fields:
     exception will be raised upon saving the document.  The goal is to have
     a simple Optimistic Lock mechanism.
 
-
 List fields
 -----------
 MongoDB allows the storage of lists of items. To add a list of items to a
