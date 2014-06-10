@@ -30,4 +30,4 @@ notifications:
   irc: "irc.freenode.org#mongoengine"
 branches:
   only:
-    - master
+    - /^master.*$/
