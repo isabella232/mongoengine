@@ -56,6 +56,10 @@ class FieldDoesNotExist(Exception):
     """
 
 
+class VersionLockError(OperationError):
+    pass
+
+
 class ValidationError(AssertionError):
     """Validation exception.
 

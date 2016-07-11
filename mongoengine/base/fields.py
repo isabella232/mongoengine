@@ -42,7 +42,7 @@ class BaseField(object):
     def __init__(self, db_field=None, name=None, required=False, default=None,
                  unique=False, unique_with=None, primary_key=False,
                  validation=None, choices=None, null=False, sparse=False,
-                 **kwargs):
+                 version_locks=None, **kwargs):
         """
         :param db_field: The database field to store this field in
             (defaults to the name of the field)
@@ -84,6 +84,7 @@ class BaseField(object):
         self.choices = choices
         self.null = null
         self.sparse = sparse
+        self.version_locks = version_locks or []
         self._owner_document = None
         
         # Detect and report conflicts between metadata and base properties.
