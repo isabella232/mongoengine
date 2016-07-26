@@ -6,8 +6,8 @@ MongoEngine
 :Author: Harry Marr (http://github.com/hmarr)
 :Maintainer: Ross Lawley (http://github.com/rozza)
 
-.. image:: https://secure.travis-ci.org/MongoEngine/mongoengine.png?branch=master
-  :target: http://travis-ci.org/MongoEngine/mongoengine
+.. image:: https://secure.travis-ci.org/lyft/mongoengine.png?branch=master-lyft
+  :target: http://travis-ci.org/lyft/mongoengine
 
 About
 =====
