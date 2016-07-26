@@ -116,6 +116,10 @@ class BaseField(object):
         EmbeddedDocument = _import_class('EmbeddedDocument')
         if isinstance(value, EmbeddedDocument) and value._instance is None:
             value._instance = weakref.proxy(instance)
+        elif isinstance(value, (list, tuple)):
+            for v in value:
+                if isinstance(v, EmbeddedDocument):
+                    v._instance = weakref.proxy(instance)
         instance._data[self.name] = value
 
     def error(self, message="", errors=None, field_name=None):
